@@ -1,7 +1,20 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from "next"
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+	async rewrites() {
+		return [
+			{
+				source: "/app/:path*",
+				destination: "/app/:path*",
+				has: [
+					{
+						type: "host",
+						value: "(?!app\\.)(.*)",
+					},
+				],
+			},
+		]
+	},
+}
 
-export default nextConfig;
+export default nextConfig
