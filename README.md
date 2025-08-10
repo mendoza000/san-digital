@@ -1,36 +1,135 @@
+# San Digital
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+## 🚀 Getting Started
 
-First, run the development server:
+First, install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+bun install
+```
+
+Then, run the development server:
+
+```bash
+bun run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Development Tools
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is configured with a comprehensive development environment:
+
+### Code Quality & Formatting
+
+- **ESLint**: Linting with TypeScript support and custom rules
+- **Prettier**: Code formatting with tabs (4 spaces width)
+- **EditorConfig**: Consistent coding styles across editors
+
+### Git Hooks & Commit Validation
+
+- **Husky**: Git hooks automation
+- **Lint-staged**: Run linters on staged files
+- **Commitlint**: Conventional commit message validation
+
+### Available Scripts
+
+```bash
+# Development
+bun run dev          # Start development server with Turbopack
+
+# Code Quality
+bun run lint         # Run ESLint
+bun run lint:fix     # Fix ESLint errors automatically
+bun run format       # Format all files with Prettier
+bun run format:check # Check if files are formatted
+bun run type-check   # TypeScript type checking
+bun run check-all    # Run all checks (types + lint + format)
+
+# Build & Start
+bun run build        # Build for production
+bun run start        # Start production server
+
+# Commits
+bun run commit       # Interactive commit with conventional format
+bun run commitlint   # Validate last commit message
+```
+
+### Commit Message Format
+
+This project uses [Conventional Commits](https://www.conventionalcommits.org/). See [COMMIT_CONVENTIONS.md](./COMMIT_CONVENTIONS.md) for detailed guidelines.
+
+**Examples:**
+
+```bash
+feat: add user authentication
+fix: resolve login button styling issue
+docs: update README with setup instructions
+```
+
+### Pre-commit Hooks
+
+Before each commit, the following checks run automatically:
+
+1. **Lint-staged**: Runs ESLint and Prettier on staged files
+2. **Type checking**: Verifies TypeScript types
+3. **Commit message validation**: Ensures conventional commit format
+
+### Configuration Files
+
+- `.eslintrc.config.mjs` - ESLint configuration
+- `.prettierrc` - Prettier formatting rules
+- `.editorconfig` - Editor configuration
+- `commitlint.config.js` - Commit message rules
+- `.husky/` - Git hooks
+- `.vscode/` - VS Code workspace settings
+
+## 📁 Project Structure
+
+```
+src/
+├── app/          # Next.js App Router pages
+├── components/   # Reusable components
+├── lib/          # Utility functions
+└── styles/       # Global styles
+```
+
+## 🎯 Tech Stack
+
+- **Framework**: Next.js 15 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **State Management**: Zustand
+- **Data Fetching**: TanStack Query
+- **Forms**: React Hook Form
+- **Database**: Supabase
+- **UI Components**: shadcn/ui
+
+## 📝 Contributing
+
+1. Clone the repository
+2. Install dependencies: `bun install`
+3. Create a feature branch: `git checkout -b feat/your-feature`
+4. Make your changes (hooks will run automatically on commit)
+5. Push and create a Pull Request
+
+### Code Style
+
+- Use **tabs** for indentation (4 spaces width)
+- Follow **conventional commits** for messages
+- Run `bun run check-all` before pushing
+- All files must pass ESLint and Prettier checks
+
+## 🚫 No Console Logs
+
+Console statements (`console.log`, `console.warn`, etc.) are treated as **errors** in this project. Use proper debugging tools instead.
 
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Learn Next.js](https://nextjs.org/learn)
+- [Next.js GitHub repository](https://github.com/vercel/next.js)
