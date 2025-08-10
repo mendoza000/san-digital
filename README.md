@@ -1,5 +1,9 @@
 # San Digital
 
+⚠️ **CÓDIGO PROPIETARIO - TODOS LOS DERECHOS RESERVADOS** ⚠️
+
+**AVISO LEGAL**: Este proyecto está bajo una licencia propietaria restrictiva. Ver [LICENSE](./LICENSE) para términos completos.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## 🚀 Getting Started
@@ -133,3 +137,17 @@ To learn more about Next.js, take a look at the following resources:
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Learn Next.js](https://nextjs.org/learn)
 - [Next.js GitHub repository](https://github.com/vercel/next.js)
+
+## 🚫 Licencia
+
+**CÓDIGO PROPIETARIO - TODOS LOS DERECHOS RESERVADOS**
+
+Este software es propiedad exclusiva de mendoza000. Está PROHIBIDO:
+
+- Usar este código para cualquier propósito
+- Copiar, modificar, distribuir o crear trabajos derivados
+- Usar como referencia o inspiración para otros proyectos
+
+Ver el archivo [LICENSE](./LICENSE) para los términos legales completos.
+
+**Si no acepta estos términos, NO está autorizado a acceder o usar este código.**
