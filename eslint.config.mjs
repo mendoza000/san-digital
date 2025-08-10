@@ -1,16 +1,16 @@
-import { FlatCompat } from "@eslint/eslintrc"
-import prettierConfig from "eslint-config-prettier"
-import prettierPlugin from "eslint-plugin-prettier"
-import unusedImports from "eslint-plugin-unused-imports"
-import { dirname } from "path"
-import { fileURLToPath } from "url"
+import { FlatCompat } from "@eslint/eslintrc";
+import prettierConfig from "eslint-config-prettier";
+import prettierPlugin from "eslint-plugin-prettier";
+import unusedImports from "eslint-plugin-unused-imports";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const compat = new FlatCompat({
 	baseDirectory: __dirname,
-})
+});
 
 const eslintConfig = [
 	...compat.extends("next/core-web-vitals", "next/typescript"),
@@ -22,9 +22,16 @@ const eslintConfig = [
 		},
 		rules: {
 			// Prettier como regla de ESLint
-			"prettier/prettier": "error",
+			"prettier/prettier": [
+				"error",
+				{
+					semi: true,
+				},
+			],
 			// Marcar console.log como error
 			"no-console": "error",
+			// Exigir punto y coma al final
+			semi: ["error", "always"],
 			// Marcar variables no utilizadas como error
 			"no-unused-vars": "off", // Desactivamos la regla base
 			"@typescript-eslint/no-unused-vars": "error",
@@ -41,6 +48,6 @@ const eslintConfig = [
 			],
 		},
 	},
-]
+];
 
-export default eslintConfig
+export default eslintConfig;
